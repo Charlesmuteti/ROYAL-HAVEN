@@ -1,0 +1,328 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Haven Hotel | Home</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f8f7f4;
+            color: #222;
+        }
+
+        nav {
+            height: 75px;
+            background: #111;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 7%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            color: #d4af37;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        .hero {
+            min-height: 85vh;
+            background:
+                linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .55)),
+                url("C:\Users\charl\Downloads\hotel.jpg");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #d4af37;
+            color: #111;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #b99522;
+        }
+
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #777;
+        }
+
+        .restaurant {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .restaurant img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .restaurant-text h2 {
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        .restaurant-text p {
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .feature {
+            background: white;
+            padding: 35px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+        }
+
+        .feature h3 {
+            margin: 15px 0;
+        }
+
+        .feature p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        footer span {
+            color: #d4af37;
+        }
+
+        @media(max-width: 768px) {
+            nav ul {
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .restaurant {
+                grid-template-columns: 1fr;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .welcome-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 30px;
+        }
+
+        .welcome-list li {
+            margin-bottom: 12px;
+            font-size: 18px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .welcome-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #d4af37;
+            font-weight: bold;
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">ROYAL HAVEN HOTEL</div>
+
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="rooms.html">ROOMS</a></li>
+            <li><a href="booking.html">BOOKING</a></li>
+            <li><a href="video.html">VIDEO</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>EXPERIENCE LUXURY
+                AND
+                COMFORT</h1>
+
+            <ul class="welcome-list">
+                <li>Exceptional Hospitality</li>
+                <li>Elegant and Comfortable Rooms</li>
+                <li>Delicious Dining Experience</li>
+            </ul>
+
+            <a href="Rooms.html" class="btn">EXPLORE OUR ROOMS</a>
+        </div>
+    </section>
+
+    <section>
+        <div class="section-title">
+            <h2>OUR RESTAURANT</h2>
+            <p>Delicious meals prepared by our experienced chefs.</p>
+        </div>
+
+        <div class="restaurant">
+
+            <img src="C:\Users\charl\Downloads\hotel.jpg" alt="Hotel Restaurant">
+
+            <div class="restaurant-text">
+                <h2>FINE DINING EXPERIENCE</h2>
+
+                <p>
+                    Enjoy freshly prepared meals in a beautiful and relaxing
+                    environment. Our restaurant offers breakfast, lunch and
+                    dinner with a variety of local and international dishes.
+                </p>
+
+                <a href="rooms.html" class="btn">BOOK YOUR STAY</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+
+        <div class="section-title">
+            <h2>WHY STAY WITH US?</h2>
+            <p>Everything you need for a comfortable stay.</p>
+        </div>
+
+        <div class="features">
+
+            <div class="feature">
+                <h1><img src="C:\Users\charl\Downloads\single-room.jpg" width="250" height="200" </h1>
+                    <h3>LUXURY ROOMS</h3>
+                    <p>
+                        Comfortable and beautifully furnished rooms
+                        designed for relaxation.
+                    </p>
+            </div>
+
+            <div class="feature">
+                <h1><img src="C:\Users\charl\Downloads\wifi.jpg" width="200" height="200"></h1>
+                <h3>FREE WI-FI</h3>
+                <p>
+                    Stay connected with fast and reliable internet.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h1>
+                    <img src="C:\Users\charl\Downloads\fine.jpg" width="200" height="200">
+                </h1>
+                <h3>FINE RESTAURANT</h3>
+                <p>
+                    Enjoy delicious meals prepared by professional chefs.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 <span>ROYAL HAVEN HOTEL</span>. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        console.log("Royal Haven Hotel loaded successfully.");
+    </script>
+
+</body>
+
+</html>
+```

@@ -1,0 +1,318 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Royal Haven | Rooms</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #222;
+
+            background-image:
+                linear-gradient(rgba(0, 0, 0, 0.45),
+                    rgba(0, 0, 0, 0.45)),
+                url("C:\Users\charl\Downloads\hotel.jpg");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+            min-height: 100vh;
+        }
+
+        nav {
+            height: 75px;
+            background: #111;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 7%;
+        }
+
+        .logo {
+            color: #d4af37;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        .header {
+            background:
+                linear-gradient(rgba(159, 89, 89, 0.6), rgba(0, 0, 0, .6)),
+                url("C:\Users\charl\Downloads\hotel.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 350px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 50px;
+        }
+
+        .rooms-container {
+            max-width: 1200px;
+            margin: 70px auto;
+            padding: 0 20px;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .room {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, .1);
+            transition: .3s;
+        }
+
+        .room:hover {
+            transform: translateY(-8px);
+        }
+
+        .room img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+        }
+
+        .room-content {
+            padding: 25px;
+        }
+
+        .room-content h2 {
+            margin-bottom: 10px;
+        }
+
+        .description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            color: #b28b1e;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .availability {
+            display: inline-block;
+            background: #e8f7ec;
+            color: #18843b;
+            padding: 7px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        .book-btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            background: #d4af37;
+            color: #111;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .book-btn:hover {
+            background: #b99522;
+        }
+
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        footer span {
+            color: #d4af37;
+        }
+
+        @media(max-width: 900px) {
+            .rooms-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media(max-width: 600px) {
+            .rooms-container {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 38px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">ROYAL HAVEN HOTEL</div>
+
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="rooms.html">ROOMS</a></li>
+            <li><a href="booking.html">BOOKING</a></li>
+            <li><a href="video.html">VIDEO</a></li>
+        </ul>
+    </nav>
+
+    <div class="header">
+        <div>
+            <h1> HERE ARE OUR ROOMS</h1><br>
+            <p>CHOOSE THE PERFECT ROOM FOR YOUR STAY</p>
+        </div>
+    </div>
+
+    <div class="rooms-container">
+
+
+
+        <div class="room">
+
+            <img src="C:\Users\charl\Downloads\single-room.jpg" alt="Single Room">
+
+            <div class="room-content">
+
+                <h2>SINGLE ROOM</h2>
+
+                <p class="description">
+                    A comfortable room designed for one guest,
+                    featuring a modern bed, private bathroom,
+                    Wi-Fi and television.
+                </p>
+
+                <p class="price">KSh 2,500 @ Night</p>
+
+                <span class="availability">● Available</span>
+
+                <button class="book-btn" onclick="bookRoom('Single Room', 2500)">
+                    BOOK NOW
+                </button>
+
+            </div>
+        </div>
+
+
+        <!-- DOUBLE ROOM -->
+
+        <div class="room">
+
+            <img src="C:\Users\charl\Downloads\double-room.jpg" alt="Double Room">
+
+            <div class="room-content">
+
+                <h2>DOUBLE ROOM</h2>
+
+                <p class="description">
+                    Spacious accommodation for two guests
+                    with a comfortable double bed, private bathroom,
+                    Wi-Fi and modern amenities.
+                </p>
+
+                <p class="price">KSh 3,500 @ Night</p>
+
+                <span class="availability">● Available</span>
+
+                <button class="book-btn" onclick="bookRoom('Double Room', 3500)">
+                    BOOK NOW
+                </button>
+
+            </div>
+        </div>
+
+
+        <!-- GUEST ROOM -->
+
+        <div class="room">
+
+            <img src="C:\Users\charl\Downloads\guest-room.jpg" alt="Guest Room">
+
+            <div class="room-content">
+
+                <h2>GUEST ROOM</h2>
+
+                <p class="description">
+                    A spacious and relaxing room suitable for
+                    guests who want extra comfort during their stay.
+                </p>
+
+                <p class="price">KSh 4,500 @ Night</p>
+
+                <span class="availability">● Available</span>
+
+                <button class="book-btn" onclick="bookRoom('Guest Room', 4500)">
+                    BOOK NOW
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 <span>ROYAL HAVEN HOTEL</span>. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+
+        function bookRoom(roomName, price) {
+
+            // Save selected room information
+            localStorage.setItem("roomName", roomName);
+            localStorage.setItem("roomPrice", price);
+
+            // Direct customer to booking page
+            window.location.href = "booking.html";
+        }
+
+    </script>
+
+</body>
+
+</html>
+```
